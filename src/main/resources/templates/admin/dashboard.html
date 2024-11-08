@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo, Admin</h1>
+        <nav>
+            <a th:href="@{/admin/gerenciamento-cursos}">Gerenciamento de Cursos</a>
+            <a th:href="@{/admin/visualizar-matriculas}">Visualizar Matrículas</a>
+            <a th:href="@{/logout}">Sair</a>
+        </nav>
+    </header>
+    <section>
+        <h2>Painel de Administração</h2>
+        <p>Use as opções acima para gerenciar cursos e matrículas.</p>
+    </section>
+</body>
+</html>

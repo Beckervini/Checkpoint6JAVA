@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Visualizar Matrículas</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <h1>Visualizar Matrículas</h1>
+        <nav>
+            <a th:href="@{/admin/dashboard}">Dashboard</a>
+            <a th:href="@{/logout}">Sair</a>
+        </nav>
+    </header>
+    <section>
+        <div th:each="matricula : ${matriculas}">
+            <h3 th:text="${matricula.curso.nome}">Curso</h3>
+            <p th:text="${matricula.aluno.nome}">Aluno</p>
+            <p th:text="${matricula.dataMatricula}">Data de Matrícula</p>
+        </div>
+    </section>
+</body>
+</html>

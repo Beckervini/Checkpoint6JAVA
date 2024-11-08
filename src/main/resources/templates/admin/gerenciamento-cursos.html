@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gerenciamento de Cursos</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Cursos</h1>
+        <nav>
+            <a th:href="@{/admin/dashboard}">Dashboard</a>
+            <a th:href="@{/logout}">Sair</a>
+        </nav>
+    </header>
+    <section>
+        <a th:href="@{/curso/form}">Adicionar Novo Curso</a>
+        <div th:each="curso : ${cursos}">
+            <h3 th:text="${curso.nome}">Nome do Curso</h3>
+            <p th:text="${curso.descricao}">Descrição do Curso</p>
+            <a th:href="@{|/curso/editar/${curso.id}|}">Editar</a>
+            <a th:href="@{|/curso/excluir/${curso.id}|}">Excluir</a>
+        </div>
+    </section>
+</body>
+</html>

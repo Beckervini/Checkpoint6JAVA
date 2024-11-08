@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Visualização de Cursos</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <h1>Lista de Cursos</h1>
+        <nav>
+            <a th:href="@{/logout}">Sair</a>
+        </nav>
+    </header>
+    <section>
+        <div th:each="curso : ${cursos}">
+            <h3 th:text="${curso.nome}">Nome do Curso</h3>
+            <p th:text="${curso.descricao}">Descrição do Curso</p>
+            <a th:href="@{|/matricula/matricular/${curso.id}|}">Matricular-se</a>
+        </div>
+    </section>
+</body>
+</html>
