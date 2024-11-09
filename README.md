@@ -41,8 +41,7 @@ spring.datasource.username=<USUARIO>
 spring.datasource.password=<SENHA>
 spring.jpa.hibernate.ddl-auto=update
 
-## Como Rodar o Projeto
-
+como rodar o projeto
 1. Clonar o Repositório
 bash
 Copiar código
